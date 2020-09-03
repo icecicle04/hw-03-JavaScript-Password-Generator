@@ -104,9 +104,11 @@ function writePassword() {
 
 // User Input prompts and alerts
 function generatePassword() {
-  var howMany = prompt(
-    "How many characters would you like your password to be? (8-128)"
-  );
+  do
+    var howMany = prompt(
+      "How many characters would you like your password to be? (8-128)"
+    );
+  while (howMany < 8 || howMany > 128);
   var lowerLs = confirm(
     "would you like lowercase characters in your password?"
   );
