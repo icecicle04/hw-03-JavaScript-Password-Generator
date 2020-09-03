@@ -90,6 +90,9 @@ var specialChars = [
   "~",
 ];
 
+// final password var
+var finalPassword = "";
+
 // test console logs
 console.log(alphaChars[2]);
 console.log(numericalChars[6]);
@@ -129,12 +132,32 @@ function generatePassword() {
   )
     alert("Please select at least 1 option!");
 
+  if (lowerLs === true) {
+    password = password + alphaChars.slice(26);
+  }
+
+  if (upperLs === true) {
+    password = password + alphaChars.slice(0, 26);
+  }
+
   console.log(howMany);
   console.log(lowerLs);
   console.log(upperLs);
   console.log(numericLs);
   console.log(specialLs);
+  console.log(password);
+
+  // function generatedPassword() {
+  //   if (lowerLs === true) {
+  //     var lowerCharPass = Math.random.alphaChars[("a", "x")];
+  //   }
+  //   console.log(lowerCharPass);
+  //   if (condition) {
+  //   }
 }
+
+// var lowerCaseCharPassword = newNewPassword;
+// console.log(newNewPassword);
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
