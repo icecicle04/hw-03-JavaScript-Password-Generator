@@ -93,11 +93,6 @@ var specialChars = [
 // final password var
 var finalPassword = "";
 
-// test console logs
-console.log(alphaChars[2]);
-console.log(numericalChars[6]);
-console.log(specialChars[3]);
-
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -146,36 +141,12 @@ function generatePassword() {
     password = password + specialChars;
   }
 
-  console.log(howMany);
-  console.log(password);
-
-  // function generatedPassword() {
-  //   if (lowerLs === true) {
-  //     var lowerCharPass = Math.random.alphaChars[("a", "x")];
-  //   }
-  //   console.log(lowerCharPass);
-  //   if (condition) {
-  //   }
+  // calculate random password through iterating
+  for (var i = 0; i < howMany; i++) {
+    var randomCharacter = Math.floor(Math.random() * password.length);
+    finalPassword = finalPassword + password[randomCharacter];
+  }
+  return finalPassword;
 }
-
-// var lowerCaseCharPassword = newNewPassword;
-// console.log(newNewPassword);
-
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-// GIVEN I need a new, secure password
-// WHEN I click the button to generate a password
-// THEN I am presented with a series of prompts for password criteria
-// WHEN prompted for password criteria
-// THEN I select which criteria to include in the password
-// WHEN prompted for the length of the password
-// THEN I choose a length of at least 8 characters and no more than 128 characters
-// WHEN prompted for character types to include in the password
-// THEN I choose lowercase, uppercase, numeric, and/or special characters
-// WHEN I answer each prompt
-// THEN my input should be validated and at least one character type should be selected
-// WHEN all prompts are answered
-// THEN a password is generated that matches the selected criteria
-// WHEN the password is generated
-// THEN the password is either displayed in an alert or written to the page
