@@ -102,10 +102,22 @@ function writePassword() {
   passwordText.value = password;
 }
 
+// User Input prompts and alerts
 function generatePassword() {
-  // initial alert for how many chars
   var howMany = prompt(
     "How many characters would you like your password to be? (8-128)"
+  );
+  var lowerLs = confirm(
+    "would you like lowercase characters in your password?"
+  );
+  var upperLs = confirm(
+    "would you like uppercase characters in your password?"
+  );
+  var numericLs = confirm(
+    "would you like numeric characters in your password?"
+  );
+  var specialLs = confirm(
+    "would you like special characters in your password?"
   );
 }
 
