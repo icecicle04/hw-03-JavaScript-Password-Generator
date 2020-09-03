@@ -56,7 +56,44 @@ var alphaChars = [
   "z",
 ];
 
+var numericalChars = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+var specialChars = [
+  "!",
+  "#",
+  "$",
+  "%",
+  "&",
+  "'",
+  "(",
+  ")",
+  "*",
+  "+",
+  ",",
+  "-",
+  ".",
+  "/",
+  ":",
+  ";",
+  "<",
+  "=",
+  ">",
+  "?",
+  "@",
+  "[",
+  "]",
+  "^",
+  "_",
+  "`",
+  "{",
+  "|",
+  "}",
+  "~",
+];
+
+// test console logs
 console.log(alphaChars[2]);
+console.log(numericalChars[6]);
+console.log(specialChars[3]);
 
 // Write password to the #password input
 function writePassword() {
@@ -68,7 +105,6 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-// ```
 // GIVEN I need a new, secure password
 // WHEN I click the button to generate a password
 // THEN I am presented with a series of prompts for password criteria
@@ -84,4 +120,3 @@ generateBtn.addEventListener("click", writePassword);
 // THEN a password is generated that matches the selected criteria
 // WHEN the password is generated
 // THEN the password is either displayed in an alert or written to the page
-// ```
