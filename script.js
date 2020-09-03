@@ -102,6 +102,13 @@ function writePassword() {
   passwordText.value = password;
 }
 
+function generatePassword() {
+  // initial alert for how many chars
+  var howMany = prompt(
+    "How many characters would you like your password to be? (8-128)"
+  );
+}
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
