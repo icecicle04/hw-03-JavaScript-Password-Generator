@@ -55,7 +55,6 @@ var alphaChars = [
   "y",
   "z",
 ];
-
 var numericalChars = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var specialChars = [
   "!",
@@ -106,7 +105,7 @@ function generatePassword() {
     var howMany = prompt(
       "How many characters would you like your password to be? (8-128)"
     );
-  while (howMany < 8 || howMany > 128);
+  while (isNaN(howMany) || howMany < 8 || howMany > 128);
   var lowerLs = confirm(
     "would you like lowercase characters in your password?"
   );
@@ -119,6 +118,7 @@ function generatePassword() {
   var specialLs = confirm(
     "would you like special characters in your password?"
   );
+  // all declined reset
   if (
     lowerLs === false &&
     upperLs === false &&
