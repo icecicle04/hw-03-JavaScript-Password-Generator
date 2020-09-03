@@ -124,9 +124,10 @@ function generatePassword() {
     upperLs === false &&
     numericLs === false &&
     specialLs === false
-  )
+  ) {
     alert("Please select at least 1 option!");
-
+    return "";
+  }
   if (lowerLs === true) {
     password = password + alphaChars.slice(26);
   }
