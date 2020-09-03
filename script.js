@@ -121,6 +121,19 @@ function generatePassword() {
   var specialLs = confirm(
     "would you like special characters in your password?"
   );
+  if (
+    lowerLs === false &&
+    upperLs === false &&
+    numericLs === false &&
+    specialLs === false
+  )
+    alert("Please select at least 1 option!");
+
+  console.log(howMany);
+  console.log(lowerLs);
+  console.log(upperLs);
+  console.log(numericLs);
+  console.log(specialLs);
 }
 
 // Add event listener to generate button
