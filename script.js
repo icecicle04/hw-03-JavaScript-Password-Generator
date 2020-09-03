@@ -139,12 +139,14 @@ function generatePassword() {
   if (upperLs === true) {
     password = password + alphaChars.slice(0, 26);
   }
+  if (numericLs === true) {
+    password = password + numericalChars;
+  }
+  if (specialLs === true) {
+    password = password + specialChars;
+  }
 
   console.log(howMany);
-  console.log(lowerLs);
-  console.log(upperLs);
-  console.log(numericLs);
-  console.log(specialLs);
   console.log(password);
 
   // function generatedPassword() {
