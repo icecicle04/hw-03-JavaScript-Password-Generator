@@ -24,4 +24,4 @@ https://icecicle04.github.io/hw-03-JavaScript-Password-Generator/
 
 # Images
 
-![Homepage](Attachments/Screen Shot 2020-09-03 at 10.56.04 PM.png)
+![](Attachments/Screen Shot 2020-09-03 at 10.55.08 PM.png)
