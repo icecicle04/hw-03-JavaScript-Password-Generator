@@ -1,23 +1,31 @@
-# hw-03-JavaScript-Password-Generator
+# Password Generator :detective:
 
-Password Generator
+## contents
 
-## Acceptance Criteria
+1. Application
 
-```
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN prompted for character types to include in the password
-THEN I choose lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
-```
+- A simple application that will generate strong and secure passwords.
+
+2. Parameters
+
+- Requires you to pick a **Number** between 8 and 128.
+- Confirms if you would like lowercase letters in your password.
+- confirms if you would like uppercase letters in your password.
+- confirms if you would like numbers in your password.
+- confirms if you would like special characters in your password.
+
+3. Result
+
+- Returns a randomly generated password given the specified criteria.
+
+# Link
+
+https://icecicle04.github.io/hw-03-JavaScript-Password-Generator/
+
+# Images
+
+![GitHub Logo](/images/logo.png)
+
+PNG:![Homepage](Attachments/Screen Shot 2020-09-03 at 10.56.04 PM.png)
+
+![Homepage](Attachments/Screen Shot 2020-09-03 at 10.56.04 PM.png)
