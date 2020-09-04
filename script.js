@@ -137,21 +137,19 @@ function generatePassword() {
   if (lowerLs) {
     emptyPassword = emptyPassword.concat(alphaChars.slice(26));
   }
-  console.log(emptyPassword);
+
   if (upperLs) {
     emptyPassword = emptyPassword.concat(alphaChars.slice(0, 26));
   }
-  console.log(emptyPassword);
+
   if (numericLs) {
     emptyPassword = emptyPassword.concat(numericalChars);
   }
-  console.log(emptyPassword);
+
   if (specialLs) {
     emptyPassword = emptyPassword.concat(specialChars);
   }
-  console.log(emptyPassword);
-  // password.join("");
-  console.log(emptyPassword);
+
   // calculate random password through iterating
   for (var i = 0; i < howMany; i++) {
     var randomCharacter = Math.floor(Math.random() * emptyPassword.length);
