@@ -1,5 +1,15 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
+
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+  passwordText.value = password;
+}
 // additional vars for chosen characters
 var alphaChars = [
   "A",
@@ -55,6 +65,7 @@ var alphaChars = [
   "y",
   "z",
 ];
+
 var numericalChars = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var specialChars = [
   "!",
@@ -92,13 +103,6 @@ var specialChars = [
 // final password var
 var finalPassword = "";
 
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-  passwordText.value = password;
-}
-
 // User Input prompts and alerts
 function generatePassword() {
   do
@@ -128,18 +132,18 @@ function generatePassword() {
     alert("Please select at least 1 option!");
     return "";
   }
-  if (lowerLs === true) {
-    password = password + alphaChars.slice(26);
+  if (lowerLs) {
+    password = alphaChars.slice(26);
   }
 
-  if (upperLs === true) {
-    password = password + alphaChars.slice(0, 26);
+  if (upperLs) {
+    password = alphaChars.slice(0, 26);
   }
-  if (numericLs === true) {
-    password = password + numericalChars;
+  if (numericLs) {
+    password = numericalChars;
   }
-  if (specialLs === true) {
-    password = password + specialChars;
+  if (specialLs) {
+    password = specialChars;
   }
 
   // calculate random password through iterating
@@ -147,7 +151,6 @@ function generatePassword() {
     var randomCharacter = Math.floor(Math.random() * password.length);
     finalPassword = finalPassword + password[randomCharacter];
   }
+
   return finalPassword;
 }
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
