@@ -10,6 +10,9 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
 }
+
+var emptyPassword = [];
+
 // additional vars for chosen characters
 var alphaChars = [
   "A",
@@ -95,7 +98,6 @@ var specialChars = [
   "_",
   "`",
   "{",
-  "|",
   "}",
   "~",
 ];
@@ -133,23 +135,27 @@ function generatePassword() {
     return "";
   }
   if (lowerLs) {
-    password = alphaChars.slice(26);
+    emptyPassword = emptyPassword.concat(alphaChars.slice(26));
   }
-
+  console.log(emptyPassword);
   if (upperLs) {
-    password = alphaChars.slice(0, 26);
+    emptyPassword = emptyPassword.concat(alphaChars.slice(0, 26));
   }
+  console.log(emptyPassword);
   if (numericLs) {
-    password = numericalChars;
+    emptyPassword = emptyPassword.concat(numericalChars);
   }
+  console.log(emptyPassword);
   if (specialLs) {
-    password = specialChars;
+    emptyPassword = emptyPassword.concat(specialChars);
   }
-
+  console.log(emptyPassword);
+  // password.join("");
+  console.log(emptyPassword);
   // calculate random password through iterating
   for (var i = 0; i < howMany; i++) {
-    var randomCharacter = Math.floor(Math.random() * password.length);
-    finalPassword = finalPassword + password[randomCharacter];
+    var randomCharacter = Math.floor(Math.random() * emptyPassword.length);
+    finalPassword = finalPassword + emptyPassword[randomCharacter];
   }
 
   return finalPassword;
